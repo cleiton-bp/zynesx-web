@@ -2,6 +2,7 @@ import { Routes } from '@angular/router';
 import { LoginPageComponent } from './pages/login-page/login-page.component';
 import { RegisterPageComponent } from './pages/register-page/register-page.component';
 import { HomePageComponent } from './pages/home-page/home-page.component';
+import { NotFoundPageComponent } from './pages/not-found-page/not-found-page.component';
 
 export const routes: Routes = [
   {
@@ -16,9 +17,8 @@ export const routes: Routes = [
     path: 'register',
     component: RegisterPageComponent,
   },
-  // {
-  //   path: 'in/dashboard',
-  //   loadComponent: () =>
-  //     import('./pages/dashboard/dashboard.component').then(m => m.DashboardComponent)
-  // }
+  {
+    path: '**',
+    component: NotFoundPageComponent,
+  },
 ];
